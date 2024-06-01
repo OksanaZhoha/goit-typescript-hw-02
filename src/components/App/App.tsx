@@ -31,7 +31,7 @@ export default function App() {
     const data = async () => {
       try {
         setLoading(true);
-        const newImages = await fetchImgGallery(query, page);
+        const newImages: Images[] = await fetchImgGallery(query, page);
         setImg((prevImages): Images[] => {
           return [...prevImages, ...newImages];
         });
